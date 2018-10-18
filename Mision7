@@ -11,13 +11,13 @@ def dividir():
     elif dividendo>=divisor:
         cociente = 1
         residuo = dividendo- divisor
-        while residuo>0:
+        while residuo-divisor>0:
             cociente +=1
             residuo -= divisor
 
         print(dividendo, "/", divisor, "=", cociente, ", sobra", residuo)
     else:
-        print("La división no se puede efectuar (N). ")
+        print("La división no se puede efectuar. ")
 
 
 def encontrarMayor():
@@ -25,7 +25,20 @@ def encontrarMayor():
     numero = 0
     while not numero ==-1:
         print("Teclea una serie de números para encontrar el mayor.")
-        numero = int(input(("Teclea un número [-1 para salir]"))
+        numero = int(input("Teclea un número [-1 para salir]: "))
+        if numero ==-1:
+            continue
+        elif numero <-1:
+            continue
+        elif numero > mayor:
+            mayor = numero
+        else:
+            continue
+
+    if not mayor ==0:
+        print("El mayor es: ", mayor)
+    else:
+        print("No hay valor mayor")
 
 
 def main():
