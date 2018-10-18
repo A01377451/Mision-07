@@ -1,0 +1,53 @@
+#Jocelyn López Ortíz A01377451
+#Ciclos While
+
+
+def dividir():
+    print("Calculando divisiones")
+    dividendo = int(input("Dividendo: "))
+    divisor = int(input("Divisor: "))
+    if divisor <= 0:
+        print("La división no se puede efectuar (N). ")
+    elif dividendo>=divisor:
+        cociente = 1
+        residuo = dividendo- divisor
+        while residuo>0:
+            cociente +=1
+            residuo -= divisor
+
+        print(dividendo, "/", divisor, "=", cociente, ", sobra", residuo)
+    else:
+        print("La división no se puede efectuar (N). ")
+
+
+def encontrarMayor():
+    mayor = 0
+    numero = 0
+    while not numero ==-1:
+        print("Teclea una serie de números para encontrar el mayor.")
+        numero = int(input(("Teclea un número [-1 para salir]"))
+
+
+def main():
+    opcion = 0
+    while not opcion ==3:
+        print()
+        print("Misión 7. Ciclos while")
+        print("Autor: Jocelyn López Ortíz")
+        print("Matrícula: A01377451")
+        print("1. Calcular divisiones")
+        print("2. Encontrar el mayor")
+        print("3.Salir")
+        opcion = int(input("Teclea tu opcción: "))
+        print()
+        if opcion == 1:
+            dividir()
+        elif opcion == 2:
+            encontrarMayor()
+        elif opcion == 3:
+            continue
+        else:
+            print("ERROR, teclea 1, 2 o 3")
+    print("Gracias por usar este programa, regresa pronto.")
+
+main()
